@@ -4,7 +4,7 @@
 
 ---
 
-This is it. The Big one. Now it's time to put all our learnings into one final project. In this assignment you will be setting up a CD pipeline with all the steps done in previous assignments. You will be setting up a staging environment along with a production environment. Your application will be deployed to the staging environment and from there can it be promoted to production.
+This is it. The Big one. Now it's time to put all our learnings into one final project. In this assignment you will be setting up a CD pipeline with all the steps done in previous assignments. You will be setting up a staging environment along with a production environment. Your application will be deployed to the staging environment and from there it can be promoted to production.
 
 What you will be working with is a Tic Tac Toe game that needs maintenance. Some logic is needed to complete the game and it is untested, some libraries are outdated and need to be updated.
 
