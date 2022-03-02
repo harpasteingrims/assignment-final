@@ -4,13 +4,13 @@
 
 ---
 
-This is it. The Big one. Now it's time to put all our learnings into one final project. In this assignment you will be setting up a CD pipeline with all the steps done in previous assignments. You will be setting up a staging environment along with a production environment. Your application will be deployed to the staging environment and from there it can be promoted to production.
+This is it. The Big one. Now it's time to put all our learnings into one final project. In this assignment you will be setting up a CD pipeline with all the steps done in previous assignments. You will be setting up a kubernetes cluster to deploy this application to.
 
 What you will be working with is a Tic Tac Toe game that needs maintenance. Some logic is needed to complete the game and it is untested, some libraries are outdated and need to be updated.
 
 The Project is a NextJS application with a Postgres database to keep track of the games.
 
-**Please remember** to commit and push often (meaningful commits), the Git history is part of the assignment.
+**Please remember** to commit and push often (meaningful commits), the Git history is part of the assignment (only the history on the `main` branch).
 
 **Group size**: 1 person
 
@@ -29,11 +29,11 @@ The Project is a NextJS application with a Postgres database to keep track of th
 
 #### **Deploy it!**
 
-- Create a Github action that does all the checks we've been doing in previous assignments and then deploys the application to a staging environment. Where then, if staging deployment is successful, it can be promoted to a production environment. Please note the checks should be done on any branch but the deployment should only happen on the `main` branch.
+- Create a Github action that does all the checks we've been doing in previous assignments and then deploys the application to a kubernetes cluster. Please note the checks should be done on any branch but the deployment should only happen on the `main` branch.
 - When deploying it should be deploying a docker image that has been tagged with the commit hash to indicate the version.
 
 
-#### **Monitor it!**
+#### **Monitor it!** (To be decided)
 
 - Add <INSERT MONITORING TOOL> to the application.
 - Create a dashboard to monitor the health of the application.
@@ -46,11 +46,12 @@ Copy the Github repo into your own repository and make it private.
 
 Node v16 is required for this project to run.
 
-We will be using Digital Ocean to host our staging and production environment and our databases. Students get $100 credits which is more than enough to cover our needs.
+We will be using Digital Ocean to host our kubernetes cluster and our databases. Students get $100 credits which is more than enough to cover our needs.
 
 - [Sign up with Digital Ocean](https://www.digitalocean.com/) and claim [your $100](https://education.github.com/pack)
-- Create two droplets in Digital Ocean (pick the cheapest). Name one Staging and the other Production.
-- Create two PostgresSQL databases. Make sure to add Staging and Production somewhere to the name of them.
+- Create a kubernetes cluster.
+- Create a PostgresSQL database.
+- (optional) Create Container registry, to host your docker images on.
 
 #### Setup your dev environment
 
@@ -69,7 +70,7 @@ Run the following commands to get started:
 
 ## Hand in
 
-Add me (arnif) as collaborator to the repository. Also make sure to send the link in Canvas when handing in the assignment.
+Add me (arnif) as collaborator to the repository. Also make sure to send the Github link and a link to the application in Canvas when handing in the assignment.
 
 
 
