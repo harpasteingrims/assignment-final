@@ -35,7 +35,7 @@ The Project is a NextJS application with a Postgres database to keep track of th
 
 #### **Monitor it!** (To be decided)
 
-- Add <INSERT MONITORING TOOL> to the application.
+- Add DataDog RUM (Real user monitoring) to the application.
 - Create a dashboard to monitor the health of the application.
 
 ---
