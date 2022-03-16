@@ -31,6 +31,7 @@ The Project is a NextJS application with a Postgres database to keep track of th
 
 - Create a Github action that does all the checks we've been doing in previous assignments and then deploys the application to a kubernetes cluster. Please note the checks should be done on any branch but the deployment should only happen on the `main` branch.
 - When deploying it should be deploying a docker image that has been tagged with the commit hash to indicate the version.
+- Add a link to the application running to this README.md file
 
 
 #### **Monitor it!**
