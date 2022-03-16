@@ -37,6 +37,7 @@ The Project is a NextJS application with a Postgres database to keep track of th
 
 - Add Datadog RUM (Real user monitoring) to the application.
 - Create a dashboard to monitor the health of the application.
+- Add a screenshot of the dashboard to this README.md file
 
 ---
 
@@ -70,7 +71,8 @@ Run the following commands to get started:
 
 ## Hand in
 
-Add me (arnif) as collaborator to the repository. Also make sure to send the Github link and a link to the application in Canvas when handing in the assignment.
+Add me (arnif) as collaborator to the repository. Add a screenshot of your Datadog dashboard to the README.md.
+Also make sure to send the Github link and a link to the application in Canvas when handing in the assignment.
 
 
 
