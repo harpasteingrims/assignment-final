@@ -33,7 +33,7 @@ The Project is a NextJS application with a Postgres database to keep track of th
 - When deploying it should be deploying a docker image that has been tagged with the commit hash to indicate the version.
 
 
-#### **Monitor it!** (To be decided)
+#### **Monitor it!**
 
 - Add Datadog RUM (Real user monitoring) to the application.
 - Create a dashboard to monitor the health of the application.
