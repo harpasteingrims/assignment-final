@@ -4,22 +4,19 @@ import axios from "axios";
 import styles from "../../styles/Home.module.css";
 import { Game } from "../../lib/gameStore";
 import { BoardHeader } from "../../components/BoardHeader";
+import { useRouter } from "next/router";
 
-function getGameId() {
-  return window.location.pathname.split("/")[
-    window.location.pathname.split("/").length - 1
-  ];
-}
 
 const GamePage = () => {
   const [game, setGame] = useState<Game>();
+  const router = useRouter();
 
   useEffect(() => {
     getGame();
-  }, []);
+  }, [router]);
 
   async function getGame() {
-    const id = getGameId();
+    const id = router.query.id as string;
     const { data } = await axios.get("/api/game/" + id);
     setGame(data);
   }
@@ -39,7 +36,7 @@ const GamePage = () => {
         <Board
           moves={game.moves}
           onMove={async (moves) => {
-            const { data } = await axios.put("/api/game/" + getGameId(), {
+            const { data } = await axios.put("/api/game/" + router.query.id, {
               moves,
             });
             setGame(data);
