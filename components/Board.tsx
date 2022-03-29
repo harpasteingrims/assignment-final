@@ -14,22 +14,23 @@ export default function Board({ onMove, moves, readOnly }: Props): JSX.Element {
   const [currentPlayer, setCurrentPlayer] = useState(getWhosTurnItIs(moves));
 
   function handleClick(cellNumber: number) {
+    const movesCopy = [...moves];
     if (readOnly) {
       return;
     }
-    if (calculateWinner(moves)) {
+    if (calculateWinner(movesCopy)) {
       return;
     }
-    if (moves[cellNumber]) {
+    if (movesCopy[cellNumber]) {
       return;
     }
 
-    moves[cellNumber] = currentPlayer;
+    movesCopy[cellNumber] = currentPlayer;
 
     const nextPlayer = currentPlayer === Sign.X ? Sign.O : Sign.X;
 
     setCurrentPlayer(nextPlayer);
-    onMove(moves);
+    onMove(movesCopy);
   }
 
   return (
